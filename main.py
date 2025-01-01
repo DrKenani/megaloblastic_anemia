@@ -41,7 +41,6 @@ st.title("Application of the Research Work: 'Machine learning models in predicti
 st.subheader("Directed by Professor Melek Kechida")
 
 
-
 # Saisie utilisateur pour les variables binaires (glossite, paresthesies_des_membres, aregen)
 binary_inputs = {}
 for var in binary_variables:
@@ -62,6 +61,7 @@ for var in expected_features:
 
 # Transformer en DataFrame
 input_df = pd.DataFrame([input_data])
+st.write(("Input data:", input_df)[:, 1][0])
 
 # Prédiction
 if st.button("Predict"):
