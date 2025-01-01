@@ -9,11 +9,10 @@ st.set_page_config(
         page_title="megaloblastic_anemia_app",
 )
 
-# Construire le chemin relatif vers le modèle sauvegardé
-model_path = Path(__file__).parent / "best_logistic_model_pipeline.pkl"
+# Charger les modèles
+modele_folder = Path(__file__).parent / "model"
 
-# Charger le modèle
-model = joblib.load(model_path)
+model = joblib.load(modele_folder / "best_logistic_model_pipeline.pkl")
 
 # Dictionnaire pour traduire les variables en anglais
 variable_labels = {
@@ -68,7 +67,7 @@ input_df = pd.DataFrame([input_data])
 if st.button("Predict"):
     try:
         probability = model.predict_proba(input_df)[:, 1][0]
-        prediction = "Non-Megaloblastic Anemia" if probability > 0.67 else "Megaloblastic Anemia"
+        prediction = "Non-Megaloblastic Anemia" if probability > 0.73 else "Megaloblastic Anemia"
 
         st.write(f"Prediction: {prediction}")
         st.write(f"Probability of Non-Megaloblastic Anemia: {probability:.2f}")
