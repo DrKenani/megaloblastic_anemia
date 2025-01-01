@@ -61,7 +61,6 @@ for var in expected_features:
 
 # Transformer en DataFrame
 input_df = pd.DataFrame([input_data])
-st.write(("Input data:", input_df)[:, 1][0])
 
 # Prédiction
 if st.button("Predict"):
