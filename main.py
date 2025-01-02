@@ -61,6 +61,8 @@ for var in expected_features:
 
 # Transformer en DataFrame
 input_df = pd.DataFrame([input_data])
+st.write("Input columns:", input_df.columns)
+st.write("Expected columns:", model.named_steps['preprocessor'].transformers[0][2])
 
 # Prédiction
 if st.button("Predict"):
