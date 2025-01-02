@@ -12,7 +12,7 @@ st.set_page_config(
 # Charger les modèles
 modele_folder = Path(__file__).parent / "model"
 
-model = joblib.load(modele_folder / "best_logistic_model_pipeline.pkl")
+model = joblib.load(modele_folder / "best_logistic_model_pipeline.joblib")
 
 # Dictionnaire pour traduire les variables en anglais
 variable_labels = {
