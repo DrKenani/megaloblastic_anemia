@@ -22,7 +22,7 @@ variable_labels = {
     'paresthesies_des_membres': 'Limb Paresthesia',
     'tcmh': 'MCHC',
     'ldh': 'LDH',
-    'aregen': 'Regenerative'
+    'aregen': 'Aregenerative'
 }
 
 # Liste des colonnes dans l'ordre attendu par le modèle
